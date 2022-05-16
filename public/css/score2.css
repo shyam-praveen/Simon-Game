@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css?family=Red+Hat+Display:400,900&display=swap");
+body,
+html {
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+  background: #4b4168;
+  color: #333;
+}
+.navbar-brand{
+  font-weight: bold;
+}
+.navbar{
+  background-color: rgba(210, 180, 140, 0.652);
+  border-radius: 4px;
+}
+
+.nav-link{
+  color: rgba(73, 72, 72, 0.512);
+}
+.main{
+	/* height: 1500px; */
+	display: flex;
+	align-items: top;
+	justify-content: center;
+	/* border: 2px solid green; */
+}
+.center {
+	/* border: 2px solid yellow; */
+	/* height: 1500px; */
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  z-index: 10;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+
+.top3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #4b4168;
+}
+.top3 .item {
+  box-sizing: border-box;
+  position: relative;
+  background: white;
+  width: 9rem;
+  height: 12.5rem;
+  text-align: center;
+  padding: 2.8rem 0 0;
+  margin: 1rem 1rem 2rem;
+  border-radius: 0.5rem;
+  transform-origin: bottom;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.1), 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+.top3 .item .pic {
+  position: absolute;
+  top: -2rem;
+  left: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.3);
+}
+.top3 .item .pos {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.top3 .item .name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.top3 .item .score {
+  opacity: 0.5;
+}
+.top3 .item .score:after {
+  display: block;
+  content: "Level";
+  opacity: 0.5;
+}
+.top3 .item.one {
+  width: 10rem;
+  height: 11.5rem;
+  padding-top: 3.5rem;
+}
+.top3 .item.one .pic {
+  width: 5rem;
+  height: 5rem;
+  left: 2.5rem;
+}
+.top3 .item:hover {
+  transform: scale(1.05);
+}
+
+.list {
+  padding-left: 2rem;
+  margin: 0 auto;
+}
+.list .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  height: 3rem;
+  border-radius: 4rem;
+  margin-bottom: 2rem;
+  background: #eaa786;
+  transform-origin: left;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.1), 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+.list .item .pos {
+  font-weight: 900;
+  position: absolute;
+  left: -2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  color: white;
+  opacity: 0.6;
+  transition: opacity 200ms ease-in-out;
+}
+.list .item .pic {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.3);
+}
+.list .item .name {
+  flex-grow: 2;
+  flex-basis: 10rem;
+  font-size: 1.1rem;
+}
+.list .item .score {
+  margin-right: 1.5rem;
+  opacity: 0.5;
+}
+.list .item .score:after {
+  margin-right: 1rem;
+  content: "Level";
+  opacity: 0.5;
+}
+.list .item:hover {
+  transform: scale(1.05);
+}
+.list .item:hover .pos {
+  opacity: 0.8;
+}
+
+/* Glitch */
+.glitch{
+  /* color: rgba(73, 72, 72, 0.512);s */
+  /* font-size: 1rem; */
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+
+  text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+  animation: glitch 500ms infinite;
+}
+
+.glitch span{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child{
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-.05em, -0.0125em);
+  opacity: 0.8;
+}
+.glitch span:last-child{
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  opacity: 0.8;
+}
+
+@keyframes glitch{
+  0%{
+      text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); 
+  }
+  14%{
+      text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); 
+  }
+  15%{
+      text-shadow: 
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); 
+  }
+  49%{
+      text-shadow: 
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); 
+  }
+  50%{
+      text-shadow: 
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75); 
+  }
+  99%{
+      text-shadow: 
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75); 
+  }
+  100%{
+      text-shadow: 
+      -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75); 
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,::before, ::after{
+      animation-delay: -1ms !important;
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      background-attachment: initial !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0s !important;
+      transition-delay: 0s !important; 
+  }
+}
+
+.heading{
+  text-align: center;
+  margin: 30px;
+  color: black ;
+  font-size: 3rem;
+}

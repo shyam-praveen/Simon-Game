@@ -1,0 +1,53 @@
+body::before{
+    background: url("https://media.istockphoto.com/vectors/cartoon-vector-stadium-background-score-board-empty-field-vector-id584208356?k=20&m=584208356&s=170667a&w=0&h=AV_hDxCXehRcmQcojl_y1S6wElmYZ8BSAEsas4J_UUU=") no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.75;
+}
+.navbar-brand{
+    color: black !important;
+    font-weight: bold;
+}
+.nav-link{
+    color: black !important;
+    font-weight: bold;
+}
+
+.heading{
+    text-align: center;
+}
+.mainBox{
+    margin: auto;
+    margin-top: 50px;
+    width: 500px;
+    padding-top: 50px;
+    padding-bottom: 3%;
+    border-radius: 10px;
+    background-color: rgba(239, 177, 252, 0.6);
+    background-blend-mode: lighten;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+}
+table{
+    text-align: center;
+}
+.rank{
+    border: 1px solid rgb(0, 0, 0);
+
+}
+.UserName{
+    border: 1px solid black;
+    width: 200px;
+}
+.MaxLevel{
+    border: 1px solid black;
+    width: 100px;
+}

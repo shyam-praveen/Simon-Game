@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="css/gamestyles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+  <label for="scoreUP">
+  <h1 id="level-title" class="glitch">Press A Key to Start</h1>
+
+  <div class="nameCard">
+    <h3 class="name">Name: <%= gamer.name %></h3>
+    <h3 class="maxScore">MaxScore: <%= gamer.MaxScore %></h3>
+    <div id="myscore" data-test=<%= gamer.MaxScore %>></div>
+    <div id="myname" data-test=<%= gamer.name %>></div>
+    <div id="mymail" data-test=<%= gamer.gmail %>></div>
+    <form action="/game" method="post">
+      <div class = "hide">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="userMail" placeholder="Mail">
+        <input type="text" name="MaxLevel" placeholder="MaxLevel">
+        <button id="scoreUP" type="submit" class="scoreBoard" name="btncov" value="game" disabled>Submit Score</button>
+      </div>
+      <!-- <button id="scoreUP" type="submit" class="scoreBoard" name="btncov" value="Score">ScoreBoard</button> -->
+        <button id="scoreUP" type="submit" class="scoreBoard" name="btncov" value="Score">
+          <div class="first">
+          <h3>ScoreBoard</h3>
+        <div class="background"></div>
+        </div>
+        </button>
+        
+        
+    
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div type="button" id="green" class="btn green">
+
+      </div>
+
+      <div type="button" id="red" class="btn red">
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="yellow" class="btn yellow">
+
+      </div>
+      <div type="button" id="blue" class="btn blue">
+
+      </div>
+
+    </div>
+
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script src="js/game.js"></script>
+</label>
+</body>
+
+</html>
