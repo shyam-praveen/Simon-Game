@@ -258,3 +258,15 @@ html {
   color: black ;
   font-size: 3rem;
 }
+
+#loader{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: hsl(200deg 23% 16%) url('https://cdn.dribbble.com/users/48190/screenshots/3825216/media/6c820fa72783866c6ae6e4b5ef85ef2e.gif') no-repeat center;
+	z-index: 999;
+}
+
+.hide{
+  display: none;
+}
