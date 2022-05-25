@@ -95,9 +95,11 @@
           <% if(rank === 4){ return false;} %>
           <% return true; %>
     <%   }) %>
+    <% rank=0; %>
     </div>
     <div class="list">
     <% scores.every(function(gamer){ %>
+      <%if(rank > 3){ %>
         <div class="item">
             <div class="pos">
               <%= rank %>
@@ -110,7 +112,7 @@
                 <%= gamer.MaxScore %>
             </div>
         </div>
-
+      <%} %>
         <% rank++; %>
 
         <% if(rank === 11){ return false;} %>
